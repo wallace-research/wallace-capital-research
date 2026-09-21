@@ -1,0 +1,139 @@
+/* Capital Research – simple shared styles */
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.7;
+  color: #212529;
+  padding-top: 0;
+  background-color: #f8f9fa;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.nav-link {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.page-header {
+  border-bottom: 2px solid #dee2e6;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+.highlight-box {
+  background-color: #ffffff;
+  border-left: 5px solid #0d6efd;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 6px 6px 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.disclaimer {
+  font-size: 0.9rem;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.summary-table {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.summary-table th {
+  background-color: #212529;
+  color: #fff;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.summary-table td {
+  vertical-align: middle;
+}
+
+.model-card {
+  background: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1.25rem;
+  height: 100%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.model-card h5 {
+  margin-bottom: 0.5rem;
+}
+
+.company-list a {
+  text-decoration: none;
+}
+
+.company-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  border: 1px solid #dee2e6;
+}
+
+.company-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.scorecard-table th,
+.scorecard-table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.scorecard-table th:first-child,
+.scorecard-table td:first-child {
+  text-align: left;
+}
+
+.buy { color: #198754; font-weight: 600; }
+.hold { color: #fd7e14; font-weight: 600; }
+.sell { color: #dc3545; font-weight: 600; }
+
+footer {
+  margin-top: 3rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid #dee2e6;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+/* Keep company nav readable on smaller screens */
+.company-nav {
+  flex-wrap: wrap;
+  gap: 0.15rem;
+}
+
+.company-nav .nav-link {
+  font-size: 0.85rem;
+  padding: 0.35rem 0.55rem;
+}
+
+.placeholder {
+  color: #6c757d;
+  font-style: italic;
+  background: #f1f3f5;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  border: 1px dashed #ced4da;
+}
+
+img.comparison-img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
