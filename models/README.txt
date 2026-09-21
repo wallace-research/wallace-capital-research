@@ -1,10 +1,4 @@
-Place your Excel models here.
+Excel DCF and forward projection models are placed here here.
 
-Expected filenames (examples):
-  nvda-dcf.xlsx
-  nvda-forward.xlsx
-  aapl-dcf.xlsx
-  aapl-forward.xlsx
-  ... and so on for each ticker.
 
-Then the Download / Preview buttons on each company page will work.
+These are linked to the the Download / Preview buttons on each company page.
