@@ -55,9 +55,15 @@
         </div>
 
         <p>
-          Use this table to record the original recommendation, the date of the write-up, and
-          subsequent total returns over chosen horizons. Update the return columns as time passes
-          to test the accuracy of each call.
+          The table below records my original recommendation, subsequent total returns over various time horizons, and if my recommendation was accurate.
+          The return columns are updated monthly to reassess.  To keep things relatively simple, I use the S&amp;P 500's one-year total return as my benchmark.  As you can see below,
+          three columns illustrate the efficacy of my prediction.  First, the analyzed stock's return over multiple time periods.  Second, SPY's return.  Last, the relative return of the analyzed stock's return.
+          A stock that generates lucid positive alpha, or outperforms SPY, is considered a good recommendation if I rated it as a Buy, a neutral recommendation if rated as a Hold, and a poor recommendation if rated as a Sell.  
+          Meanwhile, I deem a stock that rivals SPY or slightly underperforms it to be a neutral recommendation as a Buy, a good recommendation as a Hold, and a poor rating as a Sell.
+          Last, I view stocks that substantially underperform or have a negative return over one year to be a poor recommendation as a Buy, a neutral recommendation as a Hold, and a good recommendation as a Sell.  
+          While there are much more nuances that could be captured here, such as
+          CAPM, Sharpe ratios, and complicated factor models, I have elected to use this methodology for brevity and ease of viewing.  All data are from morningstar.com
+          
         </p>
 
         <div class="table-responsive mt-4">
@@ -67,188 +73,186 @@
                 <th>Company</th>
                 <th>Ticker</th>
                 <th>Recommendation</th>
-                <th>Date of Analysis</th>
-                <th>1-Month Return</th>
                 <th>3-Month Return</th>
-                <th>6-Month Return</th>
+                <th>YTD Return</th>
                 <th>1-Year Return</th>
-                <th>Notes</th>
+                <th>SPY 1-Year Return</th>
+                <th>Relative 1-Year Return</th>
+                <th>Outcome</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>NVIDIA</td>
                 <td><a href="nvda.html">NVDA</a></td>
-                <td class="buy">BUY</td>
-                <td>April 2026</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td></td>
+                <td>BUY</td>
+                <td>9.81%</td>
+                <td>22.99%</td>
+                <td>24.93%</td>
+                <td>17.23%</td>
+                <td>+7.70%</td>
+                <td>Good</td>
               </tr>
               <tr>
                 <td>Apple</td>
                 <td><a href="aapl.html">AAPL</a></td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td></td>
+                <td>BUY</td>
+                <td>14.48%</td>
+                <td>25.27%</td>
+                <td>33.09%</td>
+                <td>17.23%</td>
+                <td>+15.86%</td>
+                <td>Good</td>
               </tr>
               <tr>
                 <td>Amazon</td>
                 <td><a href="amzn.html">AMZN</a></td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td></td>
+                <td>BUY</td>
+                <td>9.53%</td>
+                <td>10.47%</td>
+                <td>12.02%</td>
+                <td>17.23%</td>
+                <td>-5.21%</td>
+                <td>Neutral</td>
               </tr>
               <tr>
                 <td>Caterpillar</td>
                 <td><a href="cat.html">CAT</a></td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td></td>
+                <td>BUY</td>
+                <td>-20.80%</td>
+                <td>41.86%</td>
+                <td>72.46%</td>
+                <td>17.23%</td>
+                <td>55.23%</td>
+                <td>Good, but monitor for correction</td>
               </tr>
               <tr>
                 <td>AT&amp;T</td>
                 <td><a href="t.html">T</a></td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td></td>
+                <td>BUY</td>
+                <td>14.83%</td>
+                <td>4.40%</td>
+                <td>-9.37%</td>
+                <td>17.23%</td>
+                <td>-26.60%</td>
+                <td>Poor, but monitor for rebound</td>
               </tr>
               <tr>
                 <td>Constellation Energy</td>
                 <td><a href="ceg.html">CEG</a></td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td></td>
+                <td>BUY</td>
+                <td>-4.23%</td>
+                <td>-25.06%</td>
+                <td>-23.62%</td>
+                <td>17.23%</td>
+                <td>-40.85%</td>
+                <td>Poor</td>
               </tr>
               <tr>
                 <td>Tesla</td>
                 <td><a href="tsla.html">TSLA</a></td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td></td>
+                <td>HOLD</td>
+                <td>-6.46%</td>
+                <td>-15.75%</td>
+                <td>-12.74%</td>
+                <td>17.23%</td>
+                <td>-29.97%</td>
+                <td>Neutral</td>
               </tr>
               <tr>
                 <td>Adobe</td>
                 <td><a href="adbe.html">ADBE</a></td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td></td>
+                <td>HOLD</td>
+                <td>22.24%</td>
+                <td>-31.93%</td>
+                <td>-34.56%</td>
+                <td>17.23%</td>
+                <td>-51.79%</td>
+                <td>Neutral</td>
               </tr>
               <tr>
                 <td>Pfizer</td>
                 <td><a href="pfe.html">PFE</a></td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td></td>
+                <td>HOLD</td>
+                <td>13.08%</td>
+                <td>17.35%</td>
+                <td>23.34%</td>
+                <td>17.23%</td>
+                <td>6.11%</td>
+                <td>Neutral</td>
               </tr>
               <tr>
-                <td>SPCX</td>
-                <td><a href="spcx.html">SPCX</a></td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td></td>
+                <td>SpaceX</td>
+                <td><a href="spcx.html">spcx</a></td>
+                <td>SELL</td>
+                <td>0.08%</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>17.23%</td>
+                <td>-17.15%</td>
+                <td>Good, but recent IPO is a wrinkle</td>
               </tr>
               <tr>
                 <td>Fiserv</td>
                 <td><a href="fisv.html">FISV</a></td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td></td>
+                <td>SELL</td>
+                <td>-2.29%</td>
+                <td>-31.37%</td>
+                <td>-64.67%</td>
+                <td>17.23%</td>
+                <td>-81.90%</td>
+                <td>Good</td>
               </tr>
               <tr>
                 <td>Micron</td>
                 <td><a href="mu.html">MU</a></td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td></td>
+                <td>BUY</td>
+                <td>-9.50%</td>
+                <td>284.17%</td>
+                <td>566.19%</td>
+                <td>17.23%</td>
+                <td>548.96%</td>
+                <td>Good</td>
               </tr>
               <tr>
                 <td>Wendy’s</td>
                 <td><a href="wen.html">WEN</a></td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td></td>
+                <td>HOLD</td>
+                <td>11.51%</td>
+                <td>-14.05%</td>
+                <td>-21.59%</td>
+                <td>17.23%</td>
+                <td>-38.82%</td>
+                <td>Neutral</td>
               </tr>
               <tr>
                 <td>Best Buy</td>
                 <td><a href="bby.html">BBY</a></td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td></td>
+                <td>HOLD</td>
+                <td>26.01%</td>
+                <td>45.97%</td>
+                <td>36.39%</td>
+                <td>17.23%</td>
+                <td>19.16%</td>
+                <td>Neutral</td>
               </tr>
               <tr>
                 <td>Mastercard</td>
                 <td><a href="ma.html">MA</a></td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td></td>
+                <td>BUY</td>
+                <td>15.01%</td>
+                <td>-2.17%</td>
+                <td>-4.32%</td>
+                <td>17.23%</td>
+                <td>-21.55%</td>
+                <td>Poor</td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <p class="text-muted small mt-3">
-          Tip: Edit this HTML file directly on GitHub (or locally) to fill in recommendations,
-          dates, and realized returns. Use <code class="buy">BUY</code>,
-          <code class="hold">HOLD</code>, or <code class="sell">SELL</code> classes for color.
+          Last updated 9/23/2026
         </p>
       </div>
     </div>
@@ -256,7 +260,7 @@
 
   <footer class="container">
     <div class="text-center">
-      Capital Research · Personal project by Ty Wallace · Not investment advice
+      Personal research project · Not investment advice
     </div>
   </footer>
 
