@@ -3,85 +3,264 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome | Wallace Capital Research</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="theme-color" content="#0b1016">
+  <meta name="description" content="Wallace Capital Research — an independent equity research and quantitative analysis dashboard.">
+  <title>Research Terminal | Wallace Capital Research</title>
   <link href="styles.css" rel="stylesheet">
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Wallace Capital Research</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Welcome</a></li>
-          <li class="nav-item"><a class="nav-link" href="scorecard.html">Scorecard</a></li>
-          <li class="nav-item"><a class="nav-link" href="writings.html">Writings</a></li>
-        </ul>
+<body class="dashboard-body">
+  <header class="terminal-header">
+    <a class="terminal-brand" href="index.html" aria-label="Wallace Capital Research home">
+      <span class="brand-mark" aria-hidden="true">W</span>
+      <span>WALLACE <span class="brand-muted">/ CAPITAL RESEARCH</span></span>
+    </a>
+    <nav class="terminal-nav" aria-label="Primary navigation">
+      <a class="terminal-nav-link is-active" href="index.html" aria-current="page">Overview</a>
+      <a class="terminal-nav-link" href="scorecard.html">Scorecard</a>
+      <a class="terminal-nav-link" href="writings.html">Essays</a>
+    </nav>
+    <div class="terminal-status"><span class="status-dot" aria-hidden="true"></span> RESEARCH SNAPSHOT</div>
+  </header>
+
+  <main class="dashboard-shell">
+    <section class="dashboard-intro" aria-labelledby="dashboard-title">
+      <div>
+        <p class="eyebrow">INDEPENDENT EQUITY RESEARCH <span>/</span> SYSTEM OVERVIEW</p>
+        <h1 id="dashboard-title">Research terminal</h1>
+        <p class="intro-copy">Company analysis, valuation models, and market research in one workspace.</p>
       </div>
-    </div>
-  </nav>
+      <p class="snapshot-date"><span>DATASET</span> 23 SEP 2026 <span class="date-divider">·</span> PUBLIC SOURCES</p>
+    </section>
 
-  <!-- Company tabs row -->
-  <div class="bg-white border-bottom">
-    <div class="container py-2">
-      <nav class="nav company-nav">
-        <a class="nav-link" href="nvda.html">NVDA</a>
-        <a class="nav-link" href="aapl.html">AAPL</a>
-        <a class="nav-link" href="amzn.html">AMZN</a>
-        <a class="nav-link" href="cat.html">CAT</a>
-        <a class="nav-link" href="t.html">T</a>
-        <a class="nav-link" href="ceg.html">CEG</a>
-        <a class="nav-link" href="tsla.html">TSLA</a>
-        <a class="nav-link" href="adbe.html">ADBE</a>
-        <a class="nav-link" href="pfe.html">PFE</a>
-        <a class="nav-link" href="spcx.html">SPCX</a>
-        <a class="nav-link" href="fisv.html">FISV</a>
-        <a class="nav-link" href="mu.html">MU</a>
-        <a class="nav-link" href="wen.html">WEN</a>
-        <a class="nav-link" href="bby.html">BBY</a>
-        <a class="nav-link" href="ma.html">MA</a>
-      </nav>
-    </div>
-  </div>
+    <nav class="instrument-strip" aria-label="Tracked companies">
+      <span class="strip-label">UNIVERSE</span>
+      <a href="nvda.html">NVDA</a><a href="aapl.html">AAPL</a><a href="amzn.html">AMZN</a>
+      <a href="cat.html">CAT</a><a href="t.html">T</a><a href="ceg.html">CEG</a>
+      <a href="tsla.html">TSLA</a><a href="adbe.html">ADBE</a><a href="pfe.html">PFE</a>
+      <a href="spcx.html">SPCX</a><a href="fisv.html">FISV</a><a href="mu.html">MU</a>
+      <a href="wen.html">WEN</a><a href="bby.html">BBY</a><a href="ma.html">MA</a>
+    </nav>
 
-  <div class="container mt-5 mb-5">
-    <div class="row">
-      <div class="col-lg-10 mx-auto">
-        <div class="page-header">
-          <h1>Welcome and thank you for visiting my website</h1>
-          <p class="lead text-muted mb-0">Equity research, DCF and forward projection models, and finance/economic/philosophical writing</p>
+    <div class="dashboard-grid">
+      <section class="terminal-panel controller-panel" aria-labelledby="controller-title">
+        <div class="panel-heading">
+          <div class="panel-title-group">
+            <span class="module-index">01</span>
+            <div>
+              <p class="eyebrow">INPUT / UNIVERSE</p>
+              <h2 id="controller-title">Data controller</h2>
+            </div>
+          </div>
+          <span class="connection-state"><span class="status-dot" aria-hidden="true"></span> OFFLINE DATA</span>
+        </div>
+        <p class="panel-description">Configure the research view. Market data is not streamed by this static site.</p>
+
+        <div class="controller-form" role="group" aria-label="Research view controls">
+          <label class="field-label" for="ticker-select">INSTRUMENT</label>
+          <div class="controller-controls">
+            <select id="ticker-select" name="ticker">
+              <option value="nvda.html">NVDA · NVIDIA</option>
+              <option value="aapl.html">AAPL · Apple</option>
+              <option value="amzn.html">AMZN · Amazon</option>
+              <option value="cat.html">CAT · Caterpillar</option>
+              <option value="t.html">T · AT&amp;T</option>
+              <option value="ceg.html">CEG · Constellation Energy</option>
+              <option value="tsla.html">TSLA · Tesla</option>
+              <option value="adbe.html">ADBE · Adobe</option>
+              <option value="pfe.html">PFE · Pfizer</option>
+              <option value="spcx.html">SPCX · SpaceX</option>
+              <option value="fisv.html">FISV · Fiserv</option>
+              <option value="mu.html">MU · Micron</option>
+              <option value="wen.html">WEN · Wendy's</option>
+              <option value="bby.html">BBY · Best Buy</option>
+              <option value="ma.html">MA · Mastercard</option>
+            </select>
+            <a class="control-submit" id="open-report" href="nvda.html">OPEN REPORT <span aria-hidden="true">↗</span></a>
+          </div>
+          <label class="field-label" for="analysis-window">ANALYSIS WINDOW</label>
+          <select id="analysis-window" name="window">
+            <option>1Y · Trailing return</option>
+            <option>YTD · Year to date</option>
+            <option>3M · Short term</option>
+          </select>
         </div>
 
-        <p>
-          This site is a student capital research project by me, Ty Wallace. It serves as a place to store my equity writeups for an array of companies chosen for diversity of sector as well as prominent name-brand recognition,
-          discounted cash flow models with independent WACC calculation and other intrinsic assumptions, forward projection models (share price forecasts), stock comparisons to major indices (found within each company's DCF model),
-          and economic essays (also bridging my love of philosophy).  My intention for this site is to combine my passion for writing with finance, as the prose is meant to be
-          informative, insightful, and somewhat lighter in nature, rather than overly rigid and data-intensive.  I also hope that this site can provide some knowledge into the realm of investing.
-          Thank you for stopping by.  
-        </p>
-
-        <div class="alert alert-secondary disclaimer mt-3">
-          Please be aware that all financial information is drawn from publicly available data and free tools.
-          Nothing on this site is meant to encompass professional investment advice as this is a self-taught finance project.
+        <div class="controller-readout" aria-label="Dataset status">
+          <div><span>FEED</span><strong>Static research data</strong></div>
+          <div><span>BENCHMARK</span><strong>S&amp;P 500 / SPY</strong></div>
+          <div><span>REFRESH</span><strong>Manual review</strong></div>
         </div>
+      </section>
 
-        <h2 class="mt-5">What to expect and how to navigate the website</h2>
-        <ul>
-          <li><strong>Welcome</strong> — this overview/home page</li>
-          <li><strong>Scorecard</strong> — a simple table to track my recommendations vs. subsequent real-world returns</li>
-          <li><strong>Writings</strong> — longer-form economic and market essays</li>
-          <li><strong>Company pages/tabs</strong> — full equity reports, investment summary tables, and model downloads for each company</li>
-        </ul>
+      <section class="terminal-panel scorecard-panel" aria-labelledby="scorecard-title">
+        <div class="panel-heading">
+          <div class="panel-title-group">
+            <span class="module-index">02</span>
+            <div>
+              <p class="eyebrow">PERFORMANCE / SIGNAL</p>
+              <h2 id="scorecard-title">Investment scorecard</h2>
+            </div>
+          </div>
+          <a class="panel-action" href="scorecard.html">FULL SCORECARD <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="panel-description">Selected one-year outcomes versus the SPY benchmark. Recommendations reflect published research calls.</p>
+        <div class="metric-row" aria-label="Scorecard summary metrics">
+          <div class="metric-card"><span>BENCHMARK</span><strong>+17.23%</strong><small>SPY · 1Y</small></div>
+          <div class="metric-card"><span>TOP RELATIVE</span><strong class="positive">+548.96%</strong><small>MU · vs. SPY</small></div>
+          <div class="metric-card"><span>ACTIVE UNIVERSE</span><strong>15</strong><small>COMPANIES</small></div>
+        </div>
+        <div class="selected-signal" aria-live="polite" aria-atomic="true">
+          <div><span>SELECTED PUBLISHED CALL</span><strong id="selected-call" class="call-buy">BUY · NVDA</strong></div>
+          <div><span id="selected-window-label">1Y RETURN</span><strong id="selected-return">+24.93%</strong></div>
+          <div><span>RELATIVE TO SPY · 1Y</span><strong id="selected-relative" class="positive">+7.70%</strong></div>
+        </div>
+        <div class="table-scroll">
+          <table class="dashboard-table">
+            <caption class="visually-hidden">Selected investment recommendations and one-year relative returns versus SPY</caption>
+            <thead><tr><th scope="col">INSTRUMENT</th><th scope="col">CALL</th><th scope="col">1Y RETURN</th><th scope="col">REL. SPY</th><th scope="col">SIGNAL</th></tr></thead>
+            <tbody>
+              <tr><th scope="row"><a href="mu.html">MU</a></th><td><span class="recommendation buy">BUY</span></td><td class="positive">+566.19%</td><td class="positive">+548.96%</td><td class="signal-positive">OUTPERFORM</td></tr>
+              <tr><th scope="row"><a href="aapl.html">AAPL</a></th><td><span class="recommendation buy">BUY</span></td><td class="positive">+33.09%</td><td class="positive">+15.86%</td><td class="signal-positive">OUTPERFORM</td></tr>
+              <tr><th scope="row"><a href="amzn.html">AMZN</a></th><td><span class="recommendation buy">BUY</span></td><td>+12.02%</td><td class="negative">−5.21%</td><td class="signal-neutral">UNDER BENCHMARK</td></tr>
+              <tr><th scope="row"><a href="fisv.html">FISV</a></th><td><span class="recommendation sell">SELL</span></td><td class="negative">−64.67%</td><td class="negative">−81.90%</td><td class="signal-positive">CALL ALIGNED</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="data-footnote">Returns and calls from the published scorecard · Snapshot dated 23 Sep 2026</p>
+      </section>
 
-  <footer class="container">
-    <div class="text-center">
-      Personal research project · Not investment advice
+      <section class="terminal-panel reports-panel" aria-labelledby="reports-title">
+        <div class="panel-heading">
+          <div class="panel-title-group">
+            <span class="module-index">03</span>
+            <div>
+              <p class="eyebrow">MODELS / VALUATION</p>
+              <h2 id="reports-title">Quantitative research</h2>
+            </div>
+          </div>
+          <span class="panel-meta">DCF · PROJECTIONS</span>
+        </div>
+        <p class="panel-description">Fundamental models and forward projections across the tracked company universe.</p>
+        <figure class="performance-chart">
+          <div class="chart-heading"><figcaption>Scorecard return profile</figcaption><span>1Y TOTAL RETURN · SELECTED</span></div>
+          <svg viewBox="0 0 620 172" role="img" aria-labelledby="chart-title chart-desc" preserveAspectRatio="none">
+            <title id="chart-title">Selected one-year returns versus SPY</title>
+            <desc id="chart-desc">Bar chart comparing Micron at 566.19 percent, Apple at 33.09 percent, the S and P 500 benchmark at 17.23 percent, Amazon at 12.02 percent, and Fiserv at minus 64.67 percent.</desc>
+            <line class="chart-gridline" x1="42" y1="24" x2="610" y2="24"></line>
+            <line class="chart-gridline" x1="42" y1="65" x2="610" y2="65"></line>
+            <line class="chart-gridline" x1="42" y1="106" x2="610" y2="106"></line>
+            <line class="chart-baseline" x1="42" y1="133" x2="610" y2="133"></line>
+            <text class="chart-axis-label" x="4" y="28">600%</text>
+            <text class="chart-axis-label" x="10" y="69">400%</text>
+            <text class="chart-axis-label" x="10" y="110">200%</text>
+            <rect class="chart-bar chart-bar-positive" x="82" y="27" width="52" height="106" rx="2"></rect>
+            <rect class="chart-bar chart-bar-positive" x="190" y="126" width="52" height="7" rx="2"></rect>
+            <rect class="chart-bar chart-bar-benchmark" x="298" y="130" width="52" height="3" rx="2"></rect>
+            <rect class="chart-bar chart-bar-muted" x="406" y="131" width="52" height="2" rx="2"></rect>
+            <rect class="chart-bar chart-bar-negative" x="514" y="133" width="52" height="12" rx="2"></rect>
+            <text class="chart-value" x="108" y="20" text-anchor="middle">566.19%</text>
+            <text class="chart-value" x="216" y="119" text-anchor="middle">33.09%</text>
+            <text class="chart-value" x="324" y="123" text-anchor="middle">17.23%</text>
+            <text class="chart-value" x="432" y="124" text-anchor="middle">12.02%</text>
+            <text class="chart-value" x="540" y="158" text-anchor="middle">−64.67%</text>
+            <text class="chart-axis-label chart-ticker-label" x="108" y="169" text-anchor="middle">MU</text>
+            <text class="chart-axis-label chart-ticker-label" x="216" y="169" text-anchor="middle">AAPL</text>
+            <text class="chart-axis-label chart-ticker-label" x="324" y="169" text-anchor="middle">SPY</text>
+            <text class="chart-axis-label chart-ticker-label" x="432" y="169" text-anchor="middle">AMZN</text>
+            <text class="chart-axis-label chart-ticker-label" x="540" y="169" text-anchor="middle">FISV</text>
+          </svg>
+          <p class="chart-note">Static comparison from the published scorecard; historical performance is not a forecast.</p>
+        </figure>
+        <div class="report-links" aria-label="Company research reports">
+          <a href="nvda.html"><span>NVDA</span> NVIDIA <span aria-hidden="true">↗</span></a>
+          <a href="aapl.html"><span>AAPL</span> Apple <span aria-hidden="true">↗</span></a>
+          <a href="amzn.html"><span>AMZN</span> Amazon <span aria-hidden="true">↗</span></a>
+          <a href="mu.html"><span>MU</span> Micron <span aria-hidden="true">↗</span></a>
+          <a href="scorecard.html"><span>+ 11</span> More company models <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section class="terminal-panel essays-panel" aria-labelledby="essays-title">
+        <div class="panel-heading">
+          <div class="panel-title-group">
+            <span class="module-index">04</span>
+            <div>
+              <p class="eyebrow">MACRO / COMMENTARY</p>
+              <h2 id="essays-title">Economic essays</h2>
+            </div>
+          </div>
+          <a class="panel-action" href="writings.html">ESSAY ARCHIVE <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="panel-description">Long-form notes on markets, macroeconomics, and the ideas shaping financial systems.</p>
+        <article class="essay-entry">
+          <p class="essay-meta"><span>RESEARCH NOTE</span><time datetime="2026-09">SEP 2026</time></p>
+          <h3><a href="essays/cyclicality_beta_essay.docx">Do Historically Cyclical Stocks Tend to Perform Better Overnight?</a></h3>
+          <p class="essay-summary">An exploratory study of overnight returns, cyclicality, and the relationship with beta—testing the boundaries of financial knowledge.</p>
+          <div class="essay-downloads">
+            <a href="essays/cyclicality_beta_essay.docx" download>READ ESSAY <span aria-hidden="true">↓</span></a>
+            <a href="essays/cyclicality_beta_data.xlsx" download>ACCOMPANYING DATA <span aria-hidden="true">↓</span></a>
+          </div>
+        </article>
+        <aside class="research-disclaimer">
+          <strong>RESEARCH NOTICE</strong>
+          <p>Independent educational research using publicly available data. Not investment advice. Verify underlying source data before making decisions.</p>
+        </aside>
+      </section>
     </div>
-  </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <footer class="terminal-footer">
+      <span>WALLACE CAPITAL RESEARCH <span class="footer-separator">/</span> INDEPENDENT ANALYSIS</span>
+      <span>DATA SOURCES: PUBLICLY AVAILABLE <span class="footer-separator">·</span> NOT INVESTMENT ADVICE</span>
+    </footer>
+  </main>
+
+  <script>
+    const scorecardData = {
+      "nvda.html": {ticker: "NVDA", call: "BUY", threeMonth: "9.81%", ytd: "22.99%", oneYear: "24.93%", relative: "+7.70%"},
+      "aapl.html": {ticker: "AAPL", call: "BUY", threeMonth: "14.48%", ytd: "25.27%", oneYear: "33.09%", relative: "+15.86%"},
+      "amzn.html": {ticker: "AMZN", call: "BUY", threeMonth: "9.53%", ytd: "10.47%", oneYear: "12.02%", relative: "−5.21%"},
+      "cat.html": {ticker: "CAT", call: "BUY", threeMonth: "−20.80%", ytd: "41.86%", oneYear: "72.46%", relative: "55.23%"},
+      "t.html": {ticker: "T", call: "BUY", threeMonth: "14.83%", ytd: "4.40%", oneYear: "−9.37%", relative: "−26.60%"},
+      "ceg.html": {ticker: "CEG", call: "BUY", threeMonth: "−4.23%", ytd: "−25.06%", oneYear: "−23.62%", relative: "−40.85%"},
+      "tsla.html": {ticker: "TSLA", call: "HOLD", threeMonth: "−6.46%", ytd: "−15.75%", oneYear: "−12.74%", relative: "−29.97%"},
+      "adbe.html": {ticker: "ADBE", call: "HOLD", threeMonth: "22.24%", ytd: "−31.93%", oneYear: "−34.56%", relative: "−51.79%"},
+      "pfe.html": {ticker: "PFE", call: "HOLD", threeMonth: "13.08%", ytd: "17.35%", oneYear: "23.34%", relative: "6.11%"},
+      "spcx.html": {ticker: "SPCX", call: "SELL", threeMonth: "0.08%", ytd: "N/A", oneYear: "N/A", relative: "−17.15%"},
+      "fisv.html": {ticker: "FISV", call: "SELL", threeMonth: "−2.29%", ytd: "−31.37%", oneYear: "−64.67%", relative: "−81.90%"},
+      "mu.html": {ticker: "MU", call: "BUY", threeMonth: "−9.50%", ytd: "284.17%", oneYear: "566.19%", relative: "548.96%"},
+      "wen.html": {ticker: "WEN", call: "HOLD", threeMonth: "11.51%", ytd: "−14.05%", oneYear: "−21.59%", relative: "−38.82%"},
+      "bby.html": {ticker: "BBY", call: "HOLD", threeMonth: "26.01%", ytd: "45.97%", oneYear: "36.39%", relative: "19.16%"},
+      "ma.html": {ticker: "MA", call: "BUY", threeMonth: "15.01%", ytd: "−2.17%", oneYear: "−4.32%", relative: "−21.55%"}
+    };
+    const tickerSelect = document.getElementById("ticker-select");
+    const analysisWindow = document.getElementById("analysis-window");
+    const openReport = document.getElementById("open-report");
+    const selectedCall = document.getElementById("selected-call");
+    const selectedReturn = document.getElementById("selected-return");
+    const selectedRelative = document.getElementById("selected-relative");
+    const selectedWindowLabel = document.getElementById("selected-window-label");
+
+    function updateResearchView() {
+      const instrument = scorecardData[tickerSelect.value];
+      const returnKey = analysisWindow.value.startsWith("3M") ? "threeMonth"
+        : analysisWindow.value.startsWith("YTD") ? "ytd" : "oneYear";
+      const windowLabel = analysisWindow.value.split(" · ")[0];
+
+      openReport.href = tickerSelect.value;
+      selectedCall.textContent = `${instrument.call} · ${instrument.ticker}`;
+      selectedCall.classList.toggle("call-buy", instrument.call === "BUY");
+      selectedCall.classList.toggle("call-hold", instrument.call === "HOLD");
+      selectedCall.classList.toggle("call-sell", instrument.call === "SELL");
+      selectedReturn.textContent = instrument[returnKey];
+      selectedWindowLabel.textContent = `${windowLabel} RETURN`;
+      selectedRelative.textContent = instrument.relative;
+      const relativeIsNegative = instrument.relative.startsWith("−") || instrument.relative.startsWith("-");
+      selectedRelative.classList.toggle("positive", !relativeIsNegative);
+      selectedRelative.classList.toggle("negative", relativeIsNegative);
+    }
+
+    tickerSelect.addEventListener("change", updateResearchView);
+    analysisWindow.addEventListener("change", updateResearchView);
+  </script>
 </body>
 </html>
